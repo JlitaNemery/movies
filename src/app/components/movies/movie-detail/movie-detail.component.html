@@ -1,0 +1,10 @@
+<div class="center">
+    <h1>{{ movie.title | titlecase | letters }}</h1>
+    <h4>IMDb Id: {{ movie.id }}</h4>
+    <h4>{{ movie.year }}</h4>
+    <h4>{{ movie.runtime }}</h4>
+    <h4>{{ movie.genre }}</h4>
+    <h4>{{ movie.director }}</h4>
+    <button class="btn btn-primary" (click)="ngxSmartModalService.getModal('editModal').open()">Edit Movie</button>
+    <button class="btn btn-danger" (click)="ngxSmartModalService.getModal('deleteModal').open()">Delete Movie</button>
+</div>

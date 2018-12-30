@@ -1,0 +1,12 @@
+
+<div class="flex-item"
+    style="cursor: pointer;"
+    [routerLink]="index"
+    routerLinkActive="active">
+        <h4>{{ movie.title | titlecase | letters }}</h4>
+        <h6>IMDb Id: {{ movie.id }}</h6>
+        <h6>Year: {{ movie.year }}</h6>
+        <h6>Length: {{ movie.runtime }} min</h6>
+        <h6>Genre: "{{ movie.genre }}"</h6>
+        <h6>Director: {{ movie.director }}</h6>
+</div>

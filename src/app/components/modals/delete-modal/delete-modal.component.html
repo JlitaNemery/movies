@@ -1,0 +1,5 @@
+<ngx-smart-modal #deleteModal [identifier]="'deleteModal'">
+    <p>Are you sure you want to delete this movie?</p>
+    <button class="btn btn-danger" (click)="onDelete(); deleteModal.close()">Ok</button>
+    <button class="btn btn-primary" (click)="deleteModal.close()">Cancel</button>
+</ngx-smart-modal>

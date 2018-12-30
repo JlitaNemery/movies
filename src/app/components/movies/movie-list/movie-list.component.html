@@ -1,0 +1,17 @@
+
+<div>
+    <div class="inner-div">
+      <button class="btn btn-primary" 
+      (click)="ngxSmartModalService.getModal('newModal').open()">Add New Movie</button> 
+    </div>        
+    <div fxLayout="row wrap" 
+    fxLayoutGap="10px" 
+    fxLayoutAlign="start stretch">  
+        <app-movie-item
+        *ngFor="let oneMovie of movies;
+        let i = index"
+        [movie]="oneMovie"
+        [index]="i"
+        ></app-movie-item>
+    </div>   
+</div>

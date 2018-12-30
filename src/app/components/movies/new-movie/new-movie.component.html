@@ -1,0 +1,59 @@
+<ngx-smart-modal #newModal [identifier]="'newModal'">
+    <form [formGroup]="newMovieForm" (ngSubmit)="onSubmit()">
+        <button type="submit"
+        class="btn btn-primary"
+        [disabled]="!newMovieForm.valid"
+        (click)="newModal.close()" >Save</button>
+        <button type="button" 
+        class="btn btn-danger" 
+        (click)="newModal.close()">Cancel</button>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text"
+            id="title"
+            formControlName="title"
+            class="form-control"
+            >
+        </div>
+        <div class="form-group">
+            <label for="id">IMDb Id</label>
+            <input type="number"
+            id="id"
+            class="form-control"
+            formControlName="id"
+            >
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="number"
+            id="year"
+            formControlName="year"
+            class="form-control"
+            >
+        </div>
+        <div class="form-group">
+            <label for="runtime">Runtime</label>
+            <input type="number"
+            id="runtime"
+            class="form-control"
+            formControlName="runtime"
+            >
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text"
+            id="genre"
+            class="form-control"
+            formControlName="genre"
+            >
+        </div>
+        <div class="form-group">
+            <label for="director">Director</label>
+            <input type="text"
+            id="director"
+            class="form-control"
+            formControlName="director"
+            >
+        </div>            
+    </form>    
+</ngx-smart-modal>
